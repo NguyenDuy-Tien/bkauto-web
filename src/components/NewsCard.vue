@@ -1,7 +1,7 @@
 <template>
   <div :class="newsClass" @click="redirectToDetailPage">
     <div
-      class="course-image"
+      class="news-image"
       :style="{
         backgroundImage: thumbnail
           ? `url(data:image/jpeg;base64,${thumbnail})`
@@ -13,7 +13,7 @@
         {{ category }}
       </div>
       <div class="title">{{ title }}</div>
-      <div class="date">{{ date }}</div>
+      <div class="date">{{ formatDateString(date) }}</div>
       <div v-if="main">
         <div class="summary">{{ summary }}</div>
       </div>
@@ -23,6 +23,8 @@
 
 <script setup>
 import { computed } from 'vue';
+import router from '@/router';
+import { formatDateString } from '@/composables/common';
 const props = defineProps({
   id: Number,
   category: String,
@@ -43,11 +45,13 @@ const redirectToDetailPage = () => {
 </script>
 
 <style lang="scss" scoped>
-.course-image {
+.news-image {
   width: 100%;
-  min-height: 180px;
+  min-height: 200px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $color-gray-4;
 }
 .description {
   padding: 15px 10px;
@@ -73,7 +77,7 @@ const redirectToDetailPage = () => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .course-image {
+  .news-image {
     width: 100%;
     flex-grow: 1;
   }

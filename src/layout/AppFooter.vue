@@ -34,7 +34,7 @@
                   </svg>
                 </span>
                 <p class="item-value">
-                  <a href="tel:0972092950">0972092950 (Mr. Quang)</a>
+                  <a href="tel:0829218245">0829218245 (Mr. Nghĩa)</a>
                 </p>
               </li>
               <li>
@@ -76,11 +76,11 @@
             <div class="title">{{ t('link.contact') }}</div>
             <div class="divider"></div>
             <div class="contacts">
-              <a href="tel:0972092950"><font-awesome-icon :icon="['fas', 'phone']" /></a>
+              <a href="tel:0829218245"><font-awesome-icon :icon="['fas', 'phone']" /></a>
               <a href="mailto:bkauto.ste@gmail.com">
                 <font-awesome-icon :icon="['fas', 'envelope']" />
               </a>
-              <a href="http://facebook.com"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+              <a href="https://www.facebook.com/BKAUTO.STE"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
             </div>
           </div>
         </div>
